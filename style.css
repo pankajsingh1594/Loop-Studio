@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 1.8;
+    color:#666666;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: poppins;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding:60px 100px;
+    position: absolute;
+    top:0;
+}
+
+nav{
+    display: flex;
+    list-style-type: none;
+    font-family: poppins;
+}
+
+nav a{
+    text-decoration: none;
+    color:white;
+    margin-left: 20px;
+}
+
+nav a:hover{
+    border-bottom:2px solid white;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.banner{
+    background: url(./images/desktop/image-hero.jpg);
+    background-size:cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    padding:250px 100px 150px 100px;
+    display: flex;
+}
+
+h1{
+    font-size: 70px;
+    color: white;
+}
+
+.box-1{
+    padding: 20px 40px;
+    border:2px solid white;
+    flex-basis:2rem;
+    flex-grow: 0.4;
+}
+
+.container-1{
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.para_image{
+    width: 100%;
+}
+
+.box-3{
+    width: 40%;
+    background-color: white;
+    padding:70px 0px 0px 70px;
+    position: absolute;
+    right: 100px;
+    margin-top:220px;
+}
+
+h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.container-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px; 
+}
+
+.container-2 h2{
+    margin-bottom: 0;
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border:2px solid #666666;
+    color:#333333;
+    text-transform: uppercase;
+    font-family: roboto;
+    font-size:16px;
+}
+
+button:hover{
+    background-color: #333333;
+    color:white;
+    border: 0;
+}
+
+.container-3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 100px 100px 100px;
+}
+
+.pods{
+    width: 23%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    margin-bottom:30px;
+}
+
+.overlay{
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-blend-mode:soft-light;
+    text-shadow:4px 4px 4px #000000;
+}
+.col-1{
+    background:url(./images/desktop/image-deep-earth.jpg);
+}
+
+.col-2{
+    background:url(./images/desktop/image-night-arcade.jpg);
+    background-size: cover;
+}
+
+.col-3{
+    background:url(./images/desktop/image-soccer-team.jpg);
+    background-size: cover;
+}
+
+.col-4{
+    background:url(./images/desktop/image-grid.jpg);
+    background-size: cover;
+}
+
+.col-5{
+    background:url(./images/desktop/image-from-above.jpg);
+    background-size: cover;
+}
+
+.col-6{
+    background:url(./images/desktop/image-pocket-borealis.jpg);
+    background-size: cover;
+}
+
+.col-7{
+    background:url(./images/desktop/image-curiosity.jpg);
+    background-size: cover;
+}
+
+.col-8{
+    background:url(./images/desktop/image-fisheye.jpg);
+    background-size: cover;
+}
+
+h3{
+    font-size:34px;
+    color:white;
+}
+
+.shadow{
+    text-shadow:4px 4px #000000;
+}
+
+.pods:hover{
+    transform: scale(1.1);
+}
+
+::selection{
+    background-color: black;
+    color:white;
+    /* line-height: auto; */
+}
+
+footer{
+    background-color: black;
+    padding:40px 100px 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+    margin-bottom: 20px;
+}
+
+.footer_nav{
+    margin-left:-20px;
+}
+
+.social_icons img{
+    margin-left:10px;
+}
+
+.size{
+    color:white;
+    font-size:25px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.size .remove{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+
+    header nav{
+        flex-direction: column;
+        position: fixed;
+        top:0px;
+        right:-100%;
+        width:100%;
+        height:100vh;
+        font-size:20px;
+        text-align: center;
+        background-color: black;
+        padding:100px;
+        z-index: 1;
+        transition: all 0.5s ease-out;
+    }
+
+    header nav li{
+        margin-top:40px;
+    }
+
+    .size{
+        display: block;
+    }
+
+    #check:checked ~ label > i.remove{
+        display: block;
+        position: absolute;
+        z-index: 2;
+        margin:-15px;
+        position: fixed;
+    }
+
+    #check:checked ~ label > i.fa-bars{
+        display: none;
+    }
+
+    #check:checked ~ nav{
+        right: 0;
+        transition: all 0.5s ease-in;
+    }
+
+    .banner{
+        background-position: center;
+    }
+
+    .box-1{
+        flex-grow: 0.7;
+    }
+
+    h1{
+        font-size:50px;
+    }
+
+    .box-2 , .box-3 , .box-4{
+        width: 100%;
+    }
+
+    .box-3{
+        position: relative;
+        padding:40px 0px 0px 0px;
+        margin: 0;
+        left: 0;
+    }
+
+    .pods{
+        width: 45%;
+        margin-bottom: 55px;
+    }
+
+    .container-3{
+        padding:100px 100px 45px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    footer p{
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width:376px){
+
+    header nav{
+        font-size:16px;
+        padding: 60px 0px !important;
+        width: 100%;
+    }
+
+    header nav li{
+        margin:20px 0px 0px 0px;
+    }
+
+    header nav a{
+        margin: 0;
+    }
+
+    header{
+        padding: 20px !important;
+    }
+
+    #check:checked ~ label > i.remove{
+        display: block;
+        position: absolute;
+        margin:-15px;
+        position: fixed;
+    }
+    
+    .banner{
+        background:url(./images/mobile/image-hero.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        padding:200px 20px 20px 20px;
+        background-position: center;
+    }
+
+    .box-1{
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    h1{
+        font-size:36px;
+    }
+
+    .container-1{
+        padding: 20px;
+    }
+
+    .box-2, .box-3, .box-4 {
+        width: 100%;
+        padding: 0px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    .flex{
+        flex-flow:column wrap;
+    }
+
+    .para_image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+    
+    .container-2 {
+        padding: 0px 20px;
+        align-items: flex-start;
+        flex-flow: column wrap;
+    }
+
+    .container-2 h2{
+        margin-bottom:20px;
+    }
+
+    .container-3 {
+        padding: 20px;
+    }
+
+    .pods{
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    .container-3 {
+        padding-bottom: 0px;
+    }
+   
+    footer{
+        padding:20px;
+    }
+
+    .flex{
+        flex-flow: column wrap;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+
+    .social_icons img {
+        margin: 20px 10px 0px 0px;
+    }
+
+    footer nav{
+        flex-flow: column wrap;
+    }
+
+    footer nav li{
+        margin-top:10px;
+    }
+}
